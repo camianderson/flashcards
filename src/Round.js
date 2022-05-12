@@ -20,7 +20,7 @@ class Round{
         }
     }
 
-    calculatePercentCorrect = () => (this.incorrectGuesses.length/this.turns) * 100;
+    calculatePercentCorrect = () => ((this.turns - this.incorrectGuesses.length)/this.turns) * 100;
 
     endRound = () => {
         const amount = this.calculatePercentCorrect();
